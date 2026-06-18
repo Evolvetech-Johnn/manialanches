@@ -1,0 +1,108 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+const menuItems = [
+  {
+    id: 1,
+    name: "X-Mania",
+    description: "Hambúrguer artesanal, queijo cheddar, bacon crocante, alface, tomate e molho especial",
+    price: "R$ 34,90",
+    image: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&q=80&w=400",
+  },
+  {
+    id: 2,
+    name: "Duplo Burguer",
+    description: "Dois hambúrgueres, queijo prato, cebola caramelizada e molho barbecue",
+    price: "R$ 39,90",
+    image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&q=80&w=400",
+  },
+  {
+    id: 3,
+    name: "Veggie Delight",
+    description: "Hambúrguer de quinoa, abacate, espinafre e molho de iogurte",
+    price: "R$ 29,90",
+    image: "https://images.unsplash.com/photo-1551782450-17144efb9c50?auto=format&fit=crop&q=80&w=400",
+  },
+  {
+    id: 4,
+    name: "Batata Frita Crocante",
+    description: "Porção de batatas fritas crocantes, temperadas e com cheddar",
+    price: "R$ 14,90",
+    image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&q=80&w=400",
+  },
+  {
+    id: 5,
+    name: "Milk Shake",
+    description: "Milk shake de chocolate, morango ou baunilha",
+    price: "R$ 12,90",
+    image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&q=80&w=400",
+  },
+  {
+    id: 6,
+    name: "Refrigerante",
+    description: "Lata de refrigerante de diversos sabores",
+    price: "R$ 5,90",
+    image: "https://images.unsplash.com/photo-1527960471264-932f39eb5846?auto=format&fit=crop&q=80&w=400",
+  },
+];
+
+export function Menu() {
+  return (
+    <section className="py-16 md:py-24 lg:py-32 bg-preto-premium">
+      <div className="container mx-auto px-4 md:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            Nosso <span className="text-amarelo-marca">Cardápio</span>
+          </h2>
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            Escolha o que mais te deixa com fome. Todos preparados com ingredientes frescos!
+          </p>
+        </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {menuItems.map((item, index) => (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ translateY: -4, scale: 1.02 }}
+              className="bg-gray-900 rounded-24 overflow-hidden"
+            >
+              <div className="relative h-56">
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex justify-between items-start mb-3">
+                  <h3 className="text-2xl font-semibold">{item.name}</h3>
+                  <span className="text-amarelo-marca font-bold text-xl">{item.price}</span>
+                </div>
+                <p className="text-gray-400 mb-4">{item.description}</p>
+                <motion.button
+                  whileHover={{ scale: 1.03, boxShadow: "0 10px 30px rgba(193,18,31,0.3)" }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full bg-vermelho-principal text-white py-3 rounded-20 font-semibold transition-all"
+                >
+                  Adicionar
+                </motion.button>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

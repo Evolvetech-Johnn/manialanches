@@ -1,0 +1,105 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+export default function Sobre() {
+  return (
+    <>
+      <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-bordô via-vermelho-escuro to-preto-premium opacity-95"></div>
+        <div className="container mx-auto px-4 md:px-8 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="flex-1"
+            >
+              <div className="relative">
+                <div className="absolute inset-0 bg-amarelo-marca rounded-full blur-3xl opacity-20"></div>
+                <Image
+                  src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=600"
+                  alt="Lanchonete Mania Lanches"
+                  width={600}
+                  height={450}
+                  className="relative rounded-2xl shadow-2xl"
+                />
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex-1 text-center lg:text-left"
+            >
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                Nossa <span className="text-amarelo-marca">História</span>
+              </h1>
+              <p className="text-lg leading-[170%] mb-6 text-gray-200">
+                Há mais de 10 anos, a Mania Lanches começou como um pequeno sonho de oferecer hambúrgueres artesanais de qualidade, preparados na chapa com muito amor e ingredientes frescos.
+              </p>
+              <p className="text-lg leading-[170%] mb-8 text-gray-200">
+                Hoje, somos referência na região por nossos sabores únicos, atendimento caloroso e compromisso com a satisfação de cada cliente. Nossa missão é fazer você sentir fome e alegria em cada mordida.
+              </p>
+              <motion.button
+                whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(255,209,0,0.3)" }}
+                whileTap={{ scale: 0.98 }}
+                className="bg-amarelo-marca text-preto-premium px-8 py-4 rounded-2xl font-semibold text-lg transition-all"
+              >
+                Venha nos conhecer
+              </motion.button>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-20 bg-preto-premium">
+        <div className="container mx-auto px-4 md:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Nossos <span className="text-amarelo-marca">Valores</span>
+            </h2>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Qualidade",
+                description: "Ingredientes frescos e selecionados para garantir o melhor sabor em cada pedido."
+              },
+              {
+                title: "Tradição",
+                description: "Receitas artesanais passadas de geração em geração, com muito amor e dedicação."
+              },
+              {
+                title: "Satisfação",
+                description: "Atendimento caloroso e compromisso total com a felicidade dos nossos clientes."
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                whileHover={{ translateY: -4, scale: 1.02 }}
+                className="bg-gray-900 rounded-2xl p-8 text-center"
+              >
+                <h3 className="text-2xl font-bold text-amarelo-marca mb-4">{item.title}</h3>
+                <p className="text-gray-400 leading-[170%]">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
