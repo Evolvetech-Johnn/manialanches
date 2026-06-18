@@ -10,10 +10,11 @@ const config: Config = {
     extend: {
       colors: {
         "amarelo-marca": "#FFD100",
-        bordô: "#7A0019",
-        "vermelho-principal": "#C1121F",
-        "vermelho-escuro": "#8B0000",
+        "verde-marmita": "#2E7D32",
+        "verde-escuro": "#1B5E20",
+        "laranja-acento": "#FF7043",
         "preto-premium": "#111111",
+        "bege-fundo": "#F5F5F0",
       },
       fontFamily: {
         sans: ["var(--font-sans)"],

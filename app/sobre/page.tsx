@@ -7,7 +7,7 @@ export default function Sobre() {
   return (
     <>
       <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-bordô via-vermelho-escuro to-preto-premium opacity-95"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-verde-escuro via-verde-marmita to-preto-premium opacity-95"></div>
         <div className="container mx-auto px-4 md:px-8 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             <motion.div
@@ -20,8 +20,8 @@ export default function Sobre() {
               <div className="relative">
                 <div className="absolute inset-0 bg-amarelo-marca rounded-full blur-3xl opacity-20"></div>
                 <Image
-                  src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=600"
-                  alt="Lanchonete Mania Lanches"
+                  src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=600"
+                  alt="Marmitaria Mania Lanches"
                   width={600}
                   height={450}
                   className="relative rounded-2xl shadow-2xl"
@@ -39,10 +39,10 @@ export default function Sobre() {
                 Nossa <span className="text-amarelo-marca">História</span>
               </h1>
               <p className="text-lg leading-[170%] mb-6 text-gray-200">
-                Há mais de 10 anos, a Mania Lanches começou como um pequeno sonho de oferecer hambúrgueres artesanais de qualidade, preparados na chapa com muito amor e ingredientes frescos.
+                Há mais de 10 anos, a Mania Lanches começou como um pequeno sonho de oferecer marmitas caseiras de qualidade, preparadas com muito amor e ingredientes frescos.
               </p>
               <p className="text-lg leading-[170%] mb-8 text-gray-200">
-                Hoje, somos referência na região por nossos sabores únicos, atendimento caloroso e compromisso com a satisfação de cada cliente. Nossa missão é fazer você sentir fome e alegria em cada mordida.
+                Hoje, somos referência na região por nossos sabores únicos, atendimento caloroso e compromisso com a satisfação de cada cliente. Nossa missão é fazer você sentir o sabor da comida de casa, com toda a conveniência.
               </p>
               <motion.button
                 whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(255,209,0,0.3)" }}
@@ -77,7 +77,7 @@ export default function Sobre() {
               },
               {
                 title: "Tradição",
-                description: "Receitas artesanais passadas de geração em geração, com muito amor e dedicação."
+                description: "Receitas caseiras passadas de geração em geração, com muito amor e dedicação."
               },
               {
                 title: "Satisfação",

@@ -7,7 +7,7 @@ export default function Delivery() {
   return (
     <>
       <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-bordô via-vermelho-principal to-preto-premium opacity-95"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-verde-escuro via-verde-marmita to-preto-premium opacity-95"></div>
         <div className="container mx-auto px-4 md:px-8 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             <motion.div
@@ -21,7 +21,7 @@ export default function Delivery() {
                 Delivery <span className="text-amarelo-marca">Rápido e Seguro</span>
               </h1>
               <p className="text-lg leading-[170%] mb-8 text-gray-200">
-                Receba seus hambúrgueres quentes e saborosos na sua casa, em até 40 minutos! Pedido rápido, fácil e seguro.
+                Receba suas marmitas quentes e saborosas na sua casa, em até 40 minutos! Pedido rápido, fácil e seguro.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <motion.button
@@ -32,9 +32,9 @@ export default function Delivery() {
                   Pedir via WhatsApp
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(193,18,31,0.3)" }}
+                  whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(46,125,50,0.3)" }}
                   whileTap={{ scale: 0.98 }}
-                  className="bg-vermelho-principal text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all"
+                  className="bg-verde-marmita text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all"
                 >
                   Ver Cardápio
                 </motion.button>
@@ -50,8 +50,8 @@ export default function Delivery() {
               <div className="relative">
                 <div className="absolute inset-0 bg-amarelo-marca rounded-full blur-3xl opacity-20"></div>
                 <Image
-                  src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&q=80&w=600"
-                  alt="Delivery de hambúrgueres"
+                  src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=600"
+                  alt="Delivery de marmitas"
                   width={600}
                   height={450}
                   className="relative rounded-2xl shadow-2xl"
@@ -75,7 +75,7 @@ export default function Delivery() {
               Como <span className="text-amarelo-marca">Funciona</span>
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Pedir o seu hambúrguer favorito nunca foi tão fácil!
+              Pedir a sua marmita favorita nunca foi tão fácil!
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -83,7 +83,7 @@ export default function Delivery() {
               {
                 number: "01",
                 title: "Escolha",
-                description: "Navegue pelo nosso cardápio e escolha os seus lanches favoritos."
+                description: "Navegue pelo nosso cardápio e escolha as suas marmitas favoritas."
               },
               {
                 number: "02",

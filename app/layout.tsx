@@ -4,8 +4,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Mania Lanches - Hambúrgueres Artesanais",
-  description: "Hambúrgueres artesanais, lanches especiais, porções e delivery. Pedido rápido e saboroso!",
+  title: "Mania Lanches - Marmitas Caseiras",
+  description: "Marmitas caseiras, almoço no local e delivery. Pedido rápido e saboroso!",
 };
 
 export default function RootLayout({
